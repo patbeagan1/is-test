@@ -10,6 +10,8 @@ sed -i -E "s/^version = \"[0-9]+\.[0-9]+\.[0-9]+\"\$/version = \"$(echo $version
 # wait for user to review the change
 read "devnull?Review the change and press Enter to continue..."
 
+cargo build
+
 # commit the change
 git commit -m "Bump version to $(echo $version | awk -F. '{print $1"."$2+1".0"}')"
 
