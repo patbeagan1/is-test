@@ -1,0 +1,10 @@
+name: is-test 
+description: An elegant replacement for the `test` command
+language: rust
+tags:
+- rust
+- application
+release_repo: patbeagan1/is-test
+release_branch: main
+has_release_script: true 
+

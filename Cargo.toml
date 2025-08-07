@@ -1,0 +1,16 @@
+[package]
+name = "is-test"
+version = "0.1.0"
+edition = "2021"
+repository = "https://github.com/patbeagan1/Open-Source-Requests"
+readme = "Readme.md"
+homepage = "https://patbeagan.dev"
+license-file = "LICENSE.txt"
+description = "A replacement for the test command, with options that are memorable. Makes shell scripting much easier."
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+atty = "0.2.14"
+clap =  { version = "4.5.42", features = ["derive"] }
+shellexpand = "3.1.1"
