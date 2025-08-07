@@ -13,7 +13,8 @@ read "devnull?Review the change and press Enter to continue..."
 cargo build
 
 # commit the change
-git commit -m "Bump version to $(echo $version | awk -F. '{print $1"."$2+1".0"}')"
+git add -A
+git commit -am "Bump version to $(echo $version | awk -F. '{print $1"."$2+1".0"}')"
 
 # push the change
 cargo publish
