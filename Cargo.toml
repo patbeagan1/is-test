@@ -12,5 +12,5 @@ description = "A replacement for the test command, with options that are memorab
 
 [dependencies]
 atty = "0.2.14"
-clap =  { version = "0.2.0, features = ["derive"] }
+clap =  { version = "0.2.0", features = ["derive"] }
 shellexpand = "3.1.1"
