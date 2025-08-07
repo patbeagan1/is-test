@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env zsh
 
 # read the version from the cli 
 read -p "Version?" version
@@ -6,7 +6,7 @@ read -p "Version?" version
 echo "$version"
 
 # if version is found, update it to the next minor version
-sed -i -E "s/version = \"[0-9]+\.[0-9]+\.[0-9]+\"/version = \"$(echo $version)/" Cargo.toml
+sed -i -E "s/version = \"[0-9]+\.[0-9]+\.[0-9]+\"/version = \"$(echo $version)/\"" Cargo.toml
 
 # wait for user to review the change
 read -p "Review the change and press Enter to continue..."
