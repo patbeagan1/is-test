@@ -3,6 +3,8 @@
 # read the version from the cli 
 read -p "Version?" version
 
+echo "$version"
+
 # if version is found, update it to the next minor version
 sed -i -E "s/version = \"[0-9]+\.[0-9]+\.[0-9]+\"/version = \"$(echo $version)/" Cargo.toml
 

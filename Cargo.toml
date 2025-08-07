@@ -1,6 +1,6 @@
 [package]
 name = "is-test"
-version = "0.1.0"
+version = "0.2.0
 edition = "2021"
 repository = "https://github.com/patbeagan1/Open-Source-Requests"
 readme = "Readme.md"
@@ -12,5 +12,5 @@ description = "A replacement for the test command, with options that are memorab
 
 [dependencies]
 atty = "0.2.14"
-clap =  { version = "4.5.42", features = ["derive"] }
+clap =  { version = "0.2.0, features = ["derive"] }
 shellexpand = "3.1.1"
