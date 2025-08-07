@@ -1,16 +1,10 @@
 #!/bin/bash
 
-# get the version from the Cargo.toml file
-version=$(cat Cargo.toml | grep -E "version = \"[0-9]+\.[0-9]+\.[0-9]+\"" | awk -F'"' '{print $2}')
-
-# if version is not found, exit
-if [ -z "$version" ]; then
-    echo "Version not found in Cargo.toml"
-    exit 1
-fi
+# read the version from the cli 
+read version -p "Version?"
 
 # if version is found, update it to the next minor version
-cat Cargo.toml | sed -E "s/version = \"[0-9]+\.[0-9]+\.[0-9]+\"/version = \"$(echo $version | awk -F. '{print $1"."$2+1".0"}')/" > Cargo.toml.tmp
+cat Cargo.toml | sed -E "s/version = \"[0-9]+\.[0-9]+\.[0-9]+\"/version = \"$(echo $version)/" > Cargo.toml.tmp
 mv Cargo.toml.tmp Cargo.toml
 
 # wait for user to review the change
