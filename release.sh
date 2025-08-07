@@ -1,8 +1,7 @@
 #!/usr/bin/env zsh
 
 # read the version from the cli 
-read -p "Version?" version
-
+read "version?Version?"
 echo "$version"
 
 # if version is found, update it to the next minor version
