@@ -14,3 +14,11 @@ description = "A replacement for the test command, with options that are memorab
 atty = "0.2.14"
 clap =  { version = "4.5.42", features = ["derive"] }
 shellexpand = "3.1.1"
+libc = "0.2"
+regex = "1.10"
+semver = "1.0"
+glob = "0.3"
+
+[dev-dependencies]
+tempfile = "3.10"
+
